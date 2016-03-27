@@ -1,4 +1,4 @@
-import { setupRouter } from '../imports/routes';
+import { setupRouter } from '../imports/client/setupRouter';
 
 setupRouter(Router);
 
