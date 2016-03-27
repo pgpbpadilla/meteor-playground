@@ -5,10 +5,10 @@ import mocha from 'gulp-mocha';
 import using from 'gulp-using';
 
 const dirs = {
-    client: 'client/**/*.js',
-    server: 'server/**/*.js',
-    imports: 'imports/**/*.js',
-    tests: 'tests/**/*.js'
+    client: 'app/client/**/*.js',
+    server: 'app/server/**/*.js',
+    imports: 'app/imports/**/*.js',
+    tests: 'app/tests/**/*.js'
 };
 
 gulp.task('mocha:client', () => {
