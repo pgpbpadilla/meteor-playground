@@ -2,6 +2,10 @@
 
 "use strict";
 
+// When writing testable code avoid using
+// import { name } from 'module'
+// The reason is that when debuggin it will appear
+// as an anonymous function which makes debugging a little tricky
 import * as routes from '../../imports/client/routes';
 
 import { expect } from 'chai';

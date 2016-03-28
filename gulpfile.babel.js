@@ -16,7 +16,7 @@ let tddClientFiles = [
     dirs.tests.client,
 ];
 
-gulp.task('tdd:client', () => {
+gulp.task('mocha:client', () => {
     return gulp.src(tddClientFiles)
         .pipe(using())
         .pipe(mocha({
@@ -24,4 +24,6 @@ gulp.task('tdd:client', () => {
         }));
 });
 
-gulp.watch(tddClientFiles, ['tdd:client']);
+gulp.task('tdd:mocha:client', () => {
+    gulp.watch(tddClientFiles, ['mocha:client']);
+});
