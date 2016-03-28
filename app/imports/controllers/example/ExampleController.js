@@ -1,5 +1,5 @@
 ExampleController = RouteController.extend({
-  layoutTemplate: 'example',
+  layoutTemplate: 'Example',
   // A place to put your subscriptions
   // this.subscribe('items');
   // // add the subscription to the waitlist

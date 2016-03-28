@@ -3,7 +3,7 @@
 import { ReactiveDict } from 'meteor/reactive-dict'
 /* Example: Event Handlers */
 /*****************************************************************************/
-Template.example.events({
+Template.Example.events({
   'click #anAction' : (event, instance) => {
     instance.myModelObj.set('rdSomeVar',
       '**' + Iron.controller().state.get('someVar') + '**');
@@ -13,7 +13,7 @@ Template.example.events({
 /*****************************************************************************/
 /* Example: Helpers */
 /*****************************************************************************/
-Template.example.helpers({
+Template.Example.helpers({
   getSomeVarFromController : () => {
     console.log('getSomeVar was called');
     return Iron.controller().state.get('someVar');
@@ -27,16 +27,16 @@ Template.example.helpers({
 /*****************************************************************************/
 /* Example: Lifecycle Hooks */
 /*****************************************************************************/
-Template.example.onCreated(function () {
+Template.Example.onCreated(function () {
   console.log('Example created');
   this.myModelObj = new ReactiveDict();
   this.myModelObj.set('p1', 'Some property that has no meaning');
   this.myModelObj.set('rdSomeVar', 'Initial value for rdSomeVar');
 });
 
-Template.example.onRendered(function () {
+Template.Example.onRendered(function () {
   console.log('Example rendered');
 });
 
-Template.example.onDestroyed(function () {
+Template.Example.onDestroyed(function () {
 });
