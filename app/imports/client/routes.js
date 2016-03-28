@@ -2,6 +2,6 @@
 
 export function setup(Router) {
   Router.configure({
-    // layoutTemplate: 'MainLayout'
+     layoutTemplate: 'MainLayout'
   });
 }

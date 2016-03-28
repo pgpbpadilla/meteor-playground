@@ -1,5 +1,5 @@
-import { setupRouter } from '../imports/client/routes';
+import * as routes from '../imports/client/routes';
 
-setupRouter(Router);
+routes.setup(Router);
 
 console.log('Client Started!!!!');
