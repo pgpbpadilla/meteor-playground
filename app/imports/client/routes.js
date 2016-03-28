@@ -7,7 +7,7 @@ export function setup(Router) {
 
   Router.route('/example', {
     name: 'example',
-    controller: 'exampleController',
+    controller: 'ExampleController',
     where: 'client'
   });
 }
