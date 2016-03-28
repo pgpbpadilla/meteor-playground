@@ -3,6 +3,7 @@
 import gulp from 'gulp';
 import mocha from 'gulp-mocha';
 import using from 'gulp-using';
+import * as karma from 'karma';
 
 const dirs = {
     client: 'app/imports/client/**/*.js',
@@ -27,3 +28,14 @@ gulp.task('mocha:client', () => {
 gulp.task('tdd:mocha:client', () => {
     gulp.watch(tddClientFiles, ['mocha:client']);
 });
+
+/**
+ * Run test once and exit
+ */
+gulp.task('tdd:karma', function (done) {
+    new karma.Server({
+        configFile: __dirname + '/karma.conf.js'
+    }, done)
+        .start();
+});
+
