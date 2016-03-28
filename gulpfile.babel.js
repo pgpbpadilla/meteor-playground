@@ -4,6 +4,8 @@ import gulp from 'gulp';
 import mocha from 'gulp-mocha';
 import using from 'gulp-using';
 
+import { spawn } from 'child_process';
+
 const dirs = {
     client: 'app/imports/client/**/*.js',
     tests: {
