@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tdd:client:debug": "iron-node node_modules/gulp/bin/gulp.js tdd:client"
+    "debug:tdd:mocha:client": "iron-node node_modules/gulp/bin/gulp.js tdd:mocha:client"
   },
   "repository": {
     "type": "git",
