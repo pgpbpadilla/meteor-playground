@@ -5,16 +5,23 @@ import mocha from 'gulp-mocha';
 import using from 'gulp-using';
 
 const dirs = {
-    client: 'app/client/**/*.js',
-    server: 'app/server/**/*.js',
-    imports: 'app/imports/**/*.js',
-    tests: 'app/tests/**/*.js'
+    client: 'app/imports/client/**/*.js',
+    tests: {
+        client: 'app/tests/client/**/*.js'
+    }
 };
 
-gulp.task('mocha:client', () => {
-    return gulp.src(dirs.client)
+let tddClientFiles = [
+    dirs.client,
+    dirs.tests.client,
+];
+
+gulp.task('tdd:client', () => {
+    return gulp.src(tddClientFiles)
         .pipe(using())
         .pipe(mocha({
-            reporter: 'progress'
+            reporter: 'spec'
         }));
 });
+
+gulp.watch(tddClientFiles, ['tdd:client']);
