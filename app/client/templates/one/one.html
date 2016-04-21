@@ -1,14 +1,18 @@
 <template name="oneTemplate">
+
     <div class="oneTemplate">
+        <h1>Main App - oneTemplate</h1>
 
         <div class="action-buttons">
             <button>Use twoLib directly from App</button>
         </div>
 
-        {{> oneWidget }}
+        <div class="direct-inclusion">
+            <h1>twoWidget - Include directly in main app</h1>
+            {{> twoWidget }}
+        </div>
 
-        <h1>Direct inclusion</h1>
-        {{> twoWidget }}
+        {{> oneWidget }}
 
     </div>
 

@@ -6,7 +6,7 @@ import { twoLib } from 'meteor/pgpb:two';
 Template.oneTemplate.events({
   'click button' : () => {
     console.log('twoLib', twoLib);
-    twoLib.makeTwo('from button click');
+    twoLib.makeTwo('from main App button click');
   }
 });
 
