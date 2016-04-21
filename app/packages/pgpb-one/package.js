@@ -9,6 +9,8 @@ Package.onUse(function (api) {
   api.versionsFrom('0.9.0');
 
   api.use('ecmascript');
+  api.use('templating');
+  api.use('less');
 
   var packages = [
     'iron:router'
@@ -18,7 +20,11 @@ Package.onUse(function (api) {
   api.imply(packages);
 
   api.addFiles('lib/one-lib.js', ['client', 'server']);
-  api.addFiles('client/one-widget.js', 'client');
+  api.addFiles([
+    'client/one-widget.html',
+    'client/one-widget.js',
+    'client/one-widget.less'
+  ], 'client');
   api.addFiles('server/pgpb-one.js', 'server');
 
   api.export('PgpbOne');

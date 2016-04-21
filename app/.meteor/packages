@@ -22,3 +22,6 @@ standard-minifier-js
 less
 iron:router
 reactive-dict
+
+pgpb:one
+templating
