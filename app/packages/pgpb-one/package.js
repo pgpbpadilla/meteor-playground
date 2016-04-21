@@ -10,7 +10,7 @@ Package.onUse(function (api) {
 
   api.use('ecmascript');
   api.use('templating');
-  api.use('less');
+  api.use('less@2.5.7');
 
   var packages = [
     'iron:router'
