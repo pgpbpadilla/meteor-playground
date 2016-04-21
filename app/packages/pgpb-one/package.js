@@ -11,6 +11,7 @@ Package.onUse(function (api) {
   api.use('ecmascript');
   api.use('templating');
   api.use('less@2.5.7');
+  api.use('pgpb:two@1.0.0');
 
   var packages = [
     'iron:router'
