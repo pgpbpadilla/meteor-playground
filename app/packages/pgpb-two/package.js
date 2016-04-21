@@ -26,5 +26,6 @@ Package.onUse(function (api) {
     'client/two-widget.less'
   ], 'client');
 
+  api.mainModule('main.js', 'client');
   api.export('PgpbTwo');
 });
